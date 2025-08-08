@@ -1,14 +1,15 @@
-import { VideoAnalysisPage } from "@/components/analysis/video-analysis-page"
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
+import { EnhancedVideoAnalysis } from "@/components/analysis/enhanced-video-analysis";
 
-export default function VideoAnalysis({ params }: { params: { id: string } }) {
+interface AnalysisPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function AnalysisPage({ params }: AnalysisPageProps) {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset className="gradient-bg">
-        <VideoAnalysisPage videoId={params.id} />
-      </SidebarInset>
-    </SidebarProvider>
-  )
+    <div className="min-h-screen p-6">
+      <EnhancedVideoAnalysis videoId={params.id} />
+    </div>
+  );
 }

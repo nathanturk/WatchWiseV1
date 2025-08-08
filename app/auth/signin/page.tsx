@@ -1,5 +1,5 @@
-import { SignInPage } from "@/components/auth/signin-page"
+import { EnhancedSignIn } from "@/components/auth/enhanced-signin";
 
 export default function SignIn() {
-  return <SignInPage />
+  return <EnhancedSignIn />;
 }
