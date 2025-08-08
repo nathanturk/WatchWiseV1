@@ -33,7 +33,11 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), transparent),
+    background: radial-gradient(
+        ellipse 80% 80% at 50% -20%,
+        rgba(120, 119, 198, 0.3),
+        transparent
+      ),
       linear-gradient(180deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
     min-height: 100vh;
   }
@@ -41,26 +45,42 @@
 
 /* Enhanced Gradients */
 .gradient-bg {
-  background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), transparent),
+  background: radial-gradient(
+      ellipse 80% 80% at 50% -20%,
+      rgba(120, 119, 198, 0.3),
+      transparent
+    ),
     linear-gradient(180deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
 }
 
 .card-gradient {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .card-gradient-hover {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .metric-card {
-  background: linear-gradient(145deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.05) 100%
+  );
   border: 1px solid rgba(139, 92, 246, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
@@ -251,9 +271,34 @@
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   background-size: 200px 100%;
   animation: shimmer 2s infinite;
+}
+
+/* Auto Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 3rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
 
 /* Custom Scrollbar */

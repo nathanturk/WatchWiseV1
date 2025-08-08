@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { SidebarTrigger } from "@/components/ui/sidebar"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import {
   Users,
   Eye,
@@ -15,50 +15,65 @@ import {
   Calendar,
   BarChart3,
   Zap,
-} from "lucide-react"
-import Link from "next/link"
+} from "lucide-react";
+import Link from "next/link";
 
 const videos = [
   {
     id: 1,
     title: "iPhone 15 Pro Max Review: The Ultimate Camera Test",
-    thumbnail: "/placeholder.svg?height=120&width=200&text=iPhone+Review",
+    thumbnail: "/images/iphonevideo.jpg",
     views: "2.4M views",
     published: "3 days ago",
     duration: "12:45",
-    ctr: "9.2%",
-    retention: "8.3m",
     status: "published",
     trend: "up",
     engagement: 95,
+    analysisTeaser: {
+      insight: "🎯 Major drop at 4:30 - Setup section losing viewers",
+      impact: "Could boost retention by 18%",
+      suggestion: "Move setup to separate video",
+      priority: "high",
+      color: "red",
+    },
   },
   {
     id: 2,
     title: "MacBook Pro M3 vs Gaming Laptop: Which Wins?",
-    thumbnail: "/placeholder.svg?height=120&width=200&text=MacBook+vs+Gaming",
+    thumbnail: "/images/macbookvideo.jpg",
     views: "1.8M views",
     published: "1 week ago",
     duration: "15:23",
-    ctr: "7.8%",
-    retention: "11.2m",
     status: "published",
     trend: "up",
     engagement: 87,
+    analysisTeaser: {
+      insight: "🚀 Peak engagement at 8:15 - Benchmark results",
+      impact: "Viewers love performance comparisons",
+      suggestion: "Add more benchmark segments",
+      priority: "medium",
+      color: "green",
+    },
   },
   {
     id: 3,
     title: "AirPods Pro 3 vs Sony WH-1000XM5: Audio Battle",
-    thumbnail: "/placeholder.svg?height=120&width=200&text=AirPods+Battle",
+    thumbnail: "/images/airpodsvideo.avif",
     views: "950K views",
     published: "2 weeks ago",
     duration: "9:17",
-    ctr: "8.9%",
-    retention: "6.8m",
     status: "published",
     trend: "stable",
     engagement: 78,
+    analysisTeaser: {
+      insight: "⚠️ 23% drop in final 2 minutes",
+      impact: "Losing viewers before conclusion",
+      suggestion: "Add call-to-action earlier",
+      priority: "high",
+      color: "orange",
+    },
   },
-]
+];
 
 const metrics = [
   {
@@ -93,7 +108,7 @@ const metrics = [
     gradient: "green-gradient",
     trend: "up",
   },
-]
+];
 
 export function DashboardPage() {
   return (
@@ -149,13 +164,20 @@ export function DashboardPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold text-white">Tech Reviews Pro</h2>
+                <h2 className="text-2xl font-bold text-white">
+                  Tech Reviews Pro
+                </h2>
                 <p className="text-gray-400 max-w-md">
-                  Professional tech reviews and tutorials for the modern audience
+                  Professional tech reviews and tutorials for the modern
+                  audience
                 </p>
                 <div className="flex items-center space-x-4 text-sm">
-                  <Badge className="bg-green-500/20 text-green-300 border-green-500/30">✓ Verified Channel</Badge>
-                  <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">🔥 Trending Creator</Badge>
+                  <Badge className="bg-green-500/20 text-green-300 border-green-500/30">
+                    ✓ Verified Channel
+                  </Badge>
+                  <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">
+                    🔥 Trending Creator
+                  </Badge>
                 </div>
               </div>
             </div>
@@ -172,7 +194,7 @@ export function DashboardPage() {
       </Card>
 
       {/* Metrics Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {metrics.map((metric, index) => (
           <Card key={index} className="card-gradient hover-lift stagger-item overflow-hidden relative">
             <CardContent className="p-6">
@@ -195,7 +217,9 @@ export function DashboardPage() {
             </CardContent>
           </Card>
         ))}
-      </div>
+      </div> */}
+
+     
 
       {/* Video Library */}
       <div className="space-y-6">
@@ -205,7 +229,9 @@ export function DashboardPage() {
               <Play className="w-6 h-6 mr-2 text-orange-500" />
               Video Library
             </h2>
-            <p className="text-gray-400 mt-1">Your latest content performance</p>
+            <p className="text-gray-400 mt-1">
+              AI-powered insights to improve your content
+            </p>
           </div>
           <div className="flex items-center space-x-3">
             <Badge
@@ -215,10 +241,18 @@ export function DashboardPage() {
               All Videos
             </Badge>
             <div className="flex border border-white/20 rounded-lg overflow-hidden">
-              <Button variant="ghost" size="sm" className="text-orange-500 bg-orange-500/10 hover:bg-orange-500/20">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-orange-500 bg-orange-500/10 hover:bg-orange-500/20"
+              >
                 <Grid3X3 className="w-4 h-4" />
               </Button>
-              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white hover:bg-white/10">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-gray-400 hover:text-white hover:bg-white/10"
+              >
                 <List className="w-4 h-4" />
               </Button>
             </div>
@@ -227,7 +261,10 @@ export function DashboardPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((video, index) => (
-            <Card key={video.id} className="card-gradient overflow-hidden group hover-lift stagger-item relative">
+            <Card
+              key={video.id}
+              className="card-gradient overflow-hidden group hover-lift stagger-item relative"
+            >
               <div className="relative overflow-hidden">
                 <img
                   src={video.thumbnail || "/placeholder.svg"}
@@ -244,7 +281,9 @@ export function DashboardPage() {
                   {video.duration}
                 </div>
                 <div className="absolute top-3 left-3">
-                  <Badge className="bg-green-500/90 text-white text-xs shadow-lg">{video.status}</Badge>
+                  <Badge className="bg-green-500/90 text-white text-xs shadow-lg">
+                    {video.status}
+                  </Badge>
                 </div>
                 {video.trend === "up" && (
                   <div className="absolute top-3 right-3">
@@ -273,15 +312,49 @@ export function DashboardPage() {
                   </div>
                 </div>
 
-                {/* Performance Metrics */}
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/20">
-                    <p className="text-xs text-green-400 font-medium">CTR</p>
-                    <p className="text-lg font-bold text-green-300">{video.ctr}</p>
-                  </div>
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20">
-                    <p className="text-xs text-blue-400 font-medium">Watch Time</p>
-                    <p className="text-lg font-bold text-blue-300">{video.retention}</p>
+                {/* AI Analysis Teaser */}
+                <div className="p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/2 border border-white/10 hover:border-orange-500/30 transition-all duration-300">
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div
+                        className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                          video.analysisTeaser.color === "red"
+                            ? "bg-red-500/20 border border-red-500/30"
+                            : video.analysisTeaser.color === "green"
+                            ? "bg-green-500/20 border border-green-500/30"
+                            : "bg-orange-500/20 border border-orange-500/30"
+                        }`}
+                      >
+                        {video.analysisTeaser.color === "red"
+                          ? "🎯"
+                          : video.analysisTeaser.color === "green"
+                          ? "🚀"
+                          : "⚠️"}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm text-white font-medium leading-tight">
+                          {video.analysisTeaser.insight}
+                        </p>
+                        <p className="text-xs text-gray-300 mt-1">
+                          {video.analysisTeaser.impact}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                      <Badge
+                        className={`text-xs px-2 py-1 ${
+                          video.analysisTeaser.priority === "high"
+                            ? "bg-red-500/20 text-red-300 border border-red-500/30"
+                            : "bg-yellow-500/20 text-yellow-300 border border-yellow-500/30"
+                        }`}
+                      >
+                        {video.analysisTeaser.priority} priority
+                      </Badge>
+                      <span className="text-xs text-gray-400 text-right max-w-[60%] leading-tight">
+                        {video.analysisTeaser.suggestion}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -329,8 +402,12 @@ export function DashboardPage() {
         <CardContent className="p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-semibold text-white mb-2">Quick Actions</h3>
-              <p className="text-gray-400">Streamline your workflow with these shortcuts</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                Quick Actions
+              </h3>
+              <p className="text-gray-400">
+                Streamline your workflow with these shortcuts
+              </p>
             </div>
             <div className="flex space-x-3">
               <Button
@@ -356,5 +433,5 @@ export function DashboardPage() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

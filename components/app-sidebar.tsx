@@ -19,11 +19,7 @@ const menuItems = [
     url: "/dashboard",
     icon: Home,
   },
-  {
-    title: "My Videos",
-    url: "/videos",
-    icon: Video,
-  },
+
   {
     title: "Upload",
     url: "/upload",
