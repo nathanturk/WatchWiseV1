@@ -50,8 +50,8 @@ const comments = [
     user: "Sarah Chen",
     avatar: "/placeholder.svg?height=32&width=32&text=SC",
     time: "2 hours ago",
-    video: "iPhone 15 Pro Max Review",
-    comment: "Great retention spike at 4:30! The visual comparison really worked well here.",
+    video: "Developers Foundry Application - Nathan Turkson",
+    comment: "Excellent 85% retention! Nathan's personal connection really resonates with viewers.",
     mentions: ["@marcus"],
     reactions: [
       { emoji: "👍", count: 3 },

@@ -9,6 +9,19 @@ import Link from "next/link"
 const videos = [
   {
     id: 1,
+    title: "Developers Foundry Application - Nathan Turkson",
+    thumbnail: "/images/analysis-preview.png",
+    views: "85K views",
+    published: "2 days ago",
+    duration: "8:30",
+    ctr: "12.5%",
+    retention: "6.8m",
+    avgViewDuration: "85.0%",
+    status: "published",
+    category: "Application",
+  },
+  {
+    id: 2,
     title: "iPhone 15 Pro Max Review: The Ultimate Camera Test",
     thumbnail: "/placeholder.svg?height=180&width=320&text=iPhone+Review",
     views: "2.4M views",
@@ -21,7 +34,7 @@ const videos = [
     category: "Tech Review",
   },
   {
-    id: 2,
+    id: 3,
     title: "MacBook Pro M3 vs Gaming Laptop: Which Wins?",
     thumbnail: "/placeholder.svg?height=180&width=320&text=MacBook+vs+Gaming",
     views: "1.8M views",
@@ -34,7 +47,7 @@ const videos = [
     category: "Comparison",
   },
   {
-    id: 3,
+    id: 4,
     title: "AirPods Pro 3 vs Sony WH-1000XM5: Audio Battle",
     thumbnail: "/placeholder.svg?height=180&width=320&text=AirPods+Battle",
     views: "950K views",
@@ -47,7 +60,7 @@ const videos = [
     category: "Audio",
   },
   {
-    id: 4,
+    id: 5,
     title: "Best Budget Smartphones 2024: Top 5 Picks",
     thumbnail: "/placeholder.svg?height=180&width=320&text=Budget+Phones",
     views: "1.2M views",
@@ -60,7 +73,7 @@ const videos = [
     category: "Roundup",
   },
   {
-    id: 5,
+    id: 6,
     title: "Tesla Model Y vs BMW iX: Electric SUV Showdown",
     thumbnail: "/placeholder.svg?height=180&width=320&text=Tesla+vs+BMW",
     views: "890K views",
@@ -73,7 +86,7 @@ const videos = [
     category: "Automotive",
   },
   {
-    id: 6,
+    id: 7,
     title: "Gaming Setup Tour 2024: $15K Ultimate Build",
     thumbnail: "/placeholder.svg?height=180&width=320&text=Gaming+Setup",
     views: "2.1M views",
@@ -127,6 +140,9 @@ export function VideosPage() {
       <div className="flex items-center space-x-3">
         <Badge variant="secondary" className="bg-orange-500/20 text-orange-300 cursor-pointer">
           All Videos
+        </Badge>
+        <Badge variant="outline" className="border-white/20 text-gray-400 hover:text-white cursor-pointer">
+          Application
         </Badge>
         <Badge variant="outline" className="border-white/20 text-gray-400 hover:text-white cursor-pointer">
           Tech Review
